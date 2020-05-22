@@ -149,9 +149,16 @@ int omap_i2c_init(struct omap_i2c_dev *dev)
 	return 0;
 }
 
+// TODO: Populate the i2c_of_match with compatible property
+static const struct of_device_id my_i2c_of_match[] = {
+        {
+        },
+        { }, //Don't delete this
+};
+
 static int sample_drv_probe(struct platform_device *pdev) 
 {
-	/* Same as the previous assignment */
+	/* Same as the previous assignment. Use DTB base approach */
 	return 0;
 }
 
